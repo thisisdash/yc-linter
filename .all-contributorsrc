@@ -2,7 +2,7 @@
   "projectName": "javascript",
   "projectOwner": "youngcapital",
   "repoType": "gitlab",
-  "repoHost": "https://gitlab.ycdev.nl/youngcapital/javascript",
+  "repoHost": "https://gitlab.ycdev.nl",
   "files": [
     "README.md"
   ],
