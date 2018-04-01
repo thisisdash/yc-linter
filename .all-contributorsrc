@@ -1,0 +1,12 @@
+{
+  "projectName": "javascript",
+  "projectOwner": "adamyeats",
+  "repoType": "gitlab",
+  "repoHost": "https://gitlab.ycdev.nl/youngcapital/javascript",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": []
+}

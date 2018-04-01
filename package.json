@@ -4,16 +4,22 @@
   "description": "The YoungCapital JavaScript style guide",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
     "url": "git@gitlab.ycdev.nl:adamyeats/javascript.git"
   },
-  "author": "",
+  "contributors": [
+    "Adam Yeats <a.yeats@youngcapital.nl>",
+    "Koop Otten <k.otten@youngcapital.nl>",
+    "Raul de Melo <r.demelo@youngcapital.nl>"
+  ],
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "all-contributors-cli": "^4.11.1",
     "babel-eslint": "^8.2.2",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^12.1.0",
