@@ -1,6 +1,6 @@
 {
   "projectName": "javascript",
-  "projectOwner": "adamyeats",
+  "projectOwner": "youngcapital",
   "repoType": "gitlab",
   "repoHost": "https://gitlab.ycdev.nl/youngcapital/javascript",
   "files": [
@@ -8,5 +8,39 @@
   ],
   "imageSize": 100,
   "commit": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "adamyeats",
+      "name": "Adam Yeats",
+      "avatar_url": "https://gitlab.ycdev.nl/uploads/-/system/user/avatar/81/avatar.png",
+      "profile": "https://gitlab.ycdev.nl/adamyeats",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "koop",
+      "name": "Koop Otten",
+      "avatar_url": "https://gitlab.ycdev.nl/uploads/-/system/user/avatar/10/avatar.png",
+      "profile": "https://gitlab.ycdev.nl/koop",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "raulfdm",
+      "name": "Raul de Melo",
+      "avatar_url": "https://gitlab.ycdev.nl/uploads/-/system/user/avatar/90/avatar.png",
+      "profile": "https://gitlab.ycdev.nl/raulfdm",
+      "contributions": [
+        "code",
+        "ideas",
+        "review"
+      ]
+    }
+  ]
 }
