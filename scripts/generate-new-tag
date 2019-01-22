@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# Generates a new tag name for the given package based on the commit
+# history of that package.
+# Commits beginning with `fix` or `feat` trigger a new patch or minor
+# version. Commits containing `BREAKING CHANGE` trigger a new major
+# version.
+set -e
+
+PACKAGE="$1"
+
+if [[ -z "$RELEASE_BRANCH" ]]; then
+  echo "Error: RELEASE_BRANCH must be defined."
+  exit 1
+fi
+
+if [[ -z "$PACKAGE" ]]; then
+  echo "Error: A package name is required"
+  exit 1
+fi
+
+SCRIPTS_DIR="$(dirname $0)"
+
+main() {
+  last_tag="$($SCRIPTS_DIR/get-last-tag $PACKAGE)"
+  new_version="$(get_new_version "$last_tag")"
+  if [[ -z "$new_version" ]]; then
+    echo "No version bump required."
+    exit 0
+  fi
+  echo "$PACKAGE-$new_version"
+}
+
+get_new_version() {
+  local last_tag last_version major minor patch log_cmd bump_type log
+  last_tag="$1"
+
+  last_version="$(echo "$last_tag" | sed "s/$PACKAGE-v//")"
+
+  major="$(echo "$last_version" | cut -d. -f 1)"
+  minor="$(echo "$last_version" | cut -d. -f 2)"
+  patch="$(echo "$last_version" | cut -d. -f 3)"
+
+  if [[ "$(_get_commits '%s %b')" == *"BREAKING CHANGE"* ]]; then
+    bump_type="breaking"
+  else
+    log="$(_get_commits '%s')"
+    bump_type="$(echo -e "$log" | grep -E "^feat|^fix" | sed 's/^\(feat\|fix\)[(:].*/\1/' | sort -u | head -1)"
+  fi
+
+  case "$bump_type" in
+  "breaking")
+    major=$((major + 1))
+    minor=0
+    patch=0
+    ;;
+  "feat")
+    minor=$((minor + 1))
+    patch=0
+    ;;
+  "fix")
+    patch=$((patch + 1))
+    ;;
+  *)
+    exit 0
+    ;;
+  esac
+
+  echo "v$major.$minor.$patch"
+}
+
+_get_commits() {
+  local format
+  format="$1"
+  git log --date=short --pretty="$format" $last_tag..origin/$RELEASE_BRANCH --follow ./packages/$PACKAGE
+}
+
+main

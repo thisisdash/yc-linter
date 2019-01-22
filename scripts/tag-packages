@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+set -e
+
+if [[ -z "$RELEASE_BRANCH" ]]; then
+  echo "Error: RELEASE_BRANCH must be defined."
+  exit 1
+fi
+
+SCRIPTS_DIR="$(dirname $0)"
+
+main() {
+  current_branch="$CI_COMMIT_REF_NAME"
+  echo "Current branch: $current_branch"
+  echo "Release branch: $RELEASE_BRANCH"
+
+  if [[ "$current_branch" != "$RELEASE_BRANCH" ]]; then
+    echo "Not on release branch '$RELEASE_BRANCH'. Exiting."
+    exit 0
+  fi
+
+  export HAS_CHANGES=
+  update_eslint_package eslint-config-yc-react
+  update_eslint_package eslint-config-yc-base
+
+  if [[ -z "$HAS_CHANGES" ]]; then
+    echo "No changes to push"
+    exit
+  fi
+
+  echo "==> Pushing changes"
+  git push origin HEAD:$current_branch
+  git push --tags
+}
+
+update_eslint_package() {
+  local package
+  package="$1"
+  last_tag="$($SCRIPTS_DIR/get-last-tag $package)"
+  echo "==> Determining new version for $package"
+  echo "Current package version: $last_tag"
+  new_tag="$($SCRIPTS_DIR/generate-new-tag $package)"
+
+  if [[ -z "$new_tag" ]]; then
+    return
+  fi
+  echo "New package version: $new_tag"
+
+  HAS_CHANGES=true
+
+  echo "==> Updating $package/package.json with new version"
+  update_package_json "$package" "$last_tag" "$new_tag"
+  git add ./packages/$package/package.json
+  git commit -m "ci: update files with new version $new_tag [skip ci]" || true
+
+  echo "==> Creating tag $new_tag"
+  changelog=$(get_changelog "$package" "$last_tag")
+  git tag -a "$new_tag" -m "$(echo -e "$new_tag\n\n$changelog")"
+}
+
+update_package_json() {
+  local last_tag new_tag last_version new_version package
+  package="$1"
+  last_tag="$2"
+  new_tag="$3"
+  last_version="$(echo "$last_tag" | sed "s/$package-v//")"
+  new_version="$(echo "$new_tag" | sed "s/$package-v//")"
+  sed -i "0,/\"version\": \"$last_version\"/ s//\"version\": \"$new_version\"/" ./packages/$package/package.json
+}
+
+get_changelog() {
+  local last_tag package
+  package="$1"
+  last_tag="$2"
+  git log '--pretty=- %s [%h]' --date=short "$last_tag..origin/$RELEASE_BRANCH" --follow ./packages/$package | grep -E "^- feat|^- fix" | sort
+}
+
+main
