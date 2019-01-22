@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-yc-base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "YoungCapital",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.3"
+  },
+  "peerDependencies": {
+    "eslint": "^5.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0"
+  }
+}

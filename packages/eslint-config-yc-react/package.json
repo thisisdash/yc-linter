@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-yc-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "YoungCapital",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-yc-base": "^1.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0"
+  },
+  "peerDependencies": {
+    "eslint": "^5.12.0"
+  }
+}
