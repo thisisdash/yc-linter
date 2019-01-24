@@ -50,7 +50,7 @@ update_eslint_package() {
   echo "==> Updating $package/package.json with new version"
   update_package_json "$package" "$last_tag" "$new_tag"
   git add ./packages/$package/package.json
-  git commit -m "ci: update files with new version $new_tag [skip ci]" || true
+  git commit -m "ci: update files with new version $new_tag" || true
 
   echo "==> Creating tag $new_tag"
   changelog=$(get_changelog "$package" "$last_tag")
