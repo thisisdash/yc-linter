@@ -24,7 +24,7 @@ main() {
   last_tag="$($SCRIPTS_DIR/get-last-tag $PACKAGE)"
   new_version="$(get_new_version "$last_tag")"
   if [[ -z "$new_version" ]]; then
-    echo "No version bump required."
+    (echo >&2 "No version bump required.")
     exit 0
   fi
   echo "$PACKAGE-$new_version"
