@@ -1,9 +1,14 @@
 module.exports = {
+  env: {
+    'es6': true,
+    'jest/globals': true
+  },
   extends: [
     'eslint-config-airbnb-base',
     'eslint-config-airbnb-base/rules/strict',
-    './rules/best-practices',
-  ].map(require.resolve).concat([
-    'plugin:jest/recommended',
-  ]),
+    './rules/rules'
+  ]
+    .map(require.resolve)
+    .concat(['plugin:jest/recommended']),
+  plugins: ['jest']
 };
