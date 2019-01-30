@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
-    "fmt": "eslint . --fix"
+    "format": "eslint . --fix"
   },
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
