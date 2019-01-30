@@ -29,9 +29,9 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     'prefer-template': 'error',
-    'quote-props': ['error', 'consistent-as-needed'],
-    'quotes': 'error',
-    'semi': 'error',
+    'quote-props': ['error', 'as-needed'],
+    quotes: 'error',
+    semi: 'error',
     'space-before-blocks': 'error',
     'space-before-function-paren': ['error', 'never'],
     'space-in-parens': 'error'
