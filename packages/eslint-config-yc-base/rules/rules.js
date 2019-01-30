@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
     'arrow-body-style': 'error',
-    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 'off',
     'comma-dangle': 'off',
     'consistent-return': 'error',
@@ -26,14 +26,15 @@ module.exports = {
     'object-curly-newline': 'off',
     'object-curly-spacing': ['error', 'always'],
     'one-var': 'off',
+    'operator-linebreak': ['error', 'after'],
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     'prefer-template': 'error',
     'quote-props': ['error', 'as-needed'],
-    quotes: 'error',
-    semi: 'error',
     'space-before-blocks': 'error',
     'space-before-function-paren': ['error', 'never'],
-    'space-in-parens': 'error'
+    'space-in-parens': 'error',
+    quotes: 'error',
+    semi: 'error'
   }
 };
