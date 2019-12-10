@@ -7,10 +7,6 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:youngcapital/yc-linter.git"
-  },
   "contributors": [
     "Gustavo Isensee",
     "Piet van Zoen"

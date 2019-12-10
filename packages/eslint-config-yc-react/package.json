@@ -1,9 +1,17 @@
 {
-  "name": "eslint-config-yc-react",
+  "name": "@youngcapital/eslint-config-yc-react",
   "version": "1.1.1",
   "main": "index.js",
   "author": "YoungCapital",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:youngcapital/yc-linter.git",
+    "directory": "./packages/eslint-config-yc-react"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix"
