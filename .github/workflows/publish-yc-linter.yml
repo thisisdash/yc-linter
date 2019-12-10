@@ -17,6 +17,8 @@ jobs:
           scope: '@youngcapital'
       - run: yarn --frozen-lockfile
       - run: yarn publish ./packages/eslint-config-yc-base || true
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: yarn publish ./packages/eslint-config-yc-react || true
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
