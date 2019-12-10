@@ -15,7 +15,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@youngcapital'
-      - run: yarn install --frozen-lockfile doen
+      - run: yarn --frozen-lockfile
       - run: yarn publish ./packages/eslint-config-yc-base || true
       - run: yarn publish ./packages/eslint-config-yc-react || true
         env:
