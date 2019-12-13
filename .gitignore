@@ -292,3 +292,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/git,jetbrains+all,linux,macos,node,sublimetext,visualstudiocode,windows
+
+# Project specific
+package-lock.json

@@ -22,10 +22,3 @@ jobs:
       - run: yarn publish ./packages/eslint-config-yc-react || true
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: npm ci
-      - run: npm unpublish eslint-config-yc-react@1.1.1
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: npm unpublish eslint-config-yc-base@1.1.0
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
