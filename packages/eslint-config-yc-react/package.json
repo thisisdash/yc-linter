@@ -9,9 +9,6 @@
     "url": "git@github.com:youngcapital/yc-linter.git",
     "directory": "./packages/eslint-config-yc-react"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix"
