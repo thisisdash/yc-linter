@@ -16,9 +16,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@youngcapital'
       - run: yarn --frozen-lockfile
-      - run: yarn publish ./packages/eslint-config-yc-base || true
+      - run: yarn publish --access public ./packages/eslint-config-yc-base || true
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: yarn publish ./packages/eslint-config-yc-react || true
+      - run: yarn publish --access public ./packages/eslint-config-yc-react || true
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
