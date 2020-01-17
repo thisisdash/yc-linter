@@ -6,19 +6,19 @@ on:
     - master
 
 jobs:
-  publish-gpr:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org/
           scope: '@youngcapital'
       - run: yarn --frozen-lockfile
       - run: yarn publish ./packages/eslint-config-yc-base || true
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: yarn publish ./packages/eslint-config-yc-react || true
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
