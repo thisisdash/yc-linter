@@ -36,6 +36,6 @@ It inherits some basic packages like:
 
 In your project you can symlink to the yc-base prettierrc using the following command:
 
-```ln -s node_modules/eslint-config-yc-base/.prettierrc.js ./.prettierrc.js```
+```ln -s node_modules/@youngcapital/eslint-config-yc-base/.prettierrc.js ./.prettierrc.js```
 
 This will allow your editor prettier integration to use our prettier configuration.
