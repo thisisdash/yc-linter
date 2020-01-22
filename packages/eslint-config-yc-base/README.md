@@ -18,7 +18,7 @@ It inherits some basic packages like:
   ```
   module.exports = {
     extends: [
-      'yc-base'
+      '@youngcapital/eslint-config-yc-base'
     ]
   };
   ```
@@ -26,7 +26,7 @@ It inherits some basic packages like:
   ```
   {
     "eslintConfig": {
-      "extends": "yc-base"
+      "extends": "@youngcapital/eslint-config-yc-base"
     }
   }
   ```
