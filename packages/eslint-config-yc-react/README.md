@@ -17,7 +17,7 @@ It inherits some basic packages like:
   ```
   module.exports = {
     extends: [
-      'yc-react'
+      '@youngcapital/eslint-config-yc-react'
     ]
   };
   ```
@@ -25,7 +25,7 @@ It inherits some basic packages like:
   ```
   {
     "eslintConfig": {
-      "extends": "yc-react"
+      "extends": "@youngcapital/eslint-config-yc-react"
     }
   }
   ```
@@ -34,4 +34,8 @@ It inherits some basic packages like:
 
 ## Using the .prettierrc.js in your project
 
-You can use the same config as yc-base has [here](../eslint-config-yc-base/README.md#using-the-.prettierrc.js-in-your-project)
+In your project you can symlink to the yc-base prettierrc using the following command:
+
+```ln -s node_modules/eslint-config-yc-base/.prettierrc.js ./.prettierrc.js```
+
+This will allow your editor prettier integration to use our prettier configuration.

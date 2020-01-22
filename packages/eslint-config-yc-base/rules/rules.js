@@ -8,8 +8,10 @@ module.exports = {
     'function-paren-newline': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'error',
+    'implicit-arrow-linebreak': 'off',
     'max-len': ['error', { code: 120 }],
     'no-console': 'error',
+    'no-confusing-arrow': 'off',
     'no-debugger': 'error',
     'no-mixed-operators': 'error',
     'no-multi-spaces': 'error',
@@ -24,17 +26,21 @@ module.exports = {
     'no-unused-vars': 'error',
     'no-use-before-define': ['error', 'nofunc'], // functions are hoisted
     'object-curly-newline': 'off',
-    'object-curly-spacing': ['error', 'always'],
+    'template-curly-spacing': 'off',
     'one-var': 'off',
-    'operator-linebreak': ['error', 'after'],
+    'operator-linebreak': 'off',
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     'prefer-template': 'error',
     'quote-props': ['error', 'as-needed'],
     'space-before-blocks': 'error',
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': [
+      'error',
+      { anonymous: 'never', named: 'never', asyncArrow: 'always' }
+    ],
     'space-in-parens': 'error',
     quotes: 'error',
-    semi: 'error'
+    semi: 'error',
+    indent: 'off'
   }
 };
