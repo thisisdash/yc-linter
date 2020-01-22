@@ -13,7 +13,6 @@ Want to contribute to the style guide? That's great! Here are a few guidelines t
  * Create a branch. We use [`git flow`](https://github.com/nvie/gitflow) to create branches based on `develop`.
  * Make your change or bug fix. Don't forget to add yourself to `.all-contributorsrc` to show up in our contributors list!
  * Send a merge request. *Don't forget to bump the version and add to the CHANGELOG!*
- * The front-end guild will vote using :thumbsup: and :thumbsdown:.
  * If approved, a maintainer will merge your change.
 
 ## Contributing to an existing issue
