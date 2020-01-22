@@ -27,8 +27,3 @@ If the issue is a few months old, it might be a good idea to write a short comme
 
 Feel free to ask for more detail on what is expected: are there any more details or specifications you need to know?
 And if at any point you get stuck: don't hesitate to ask for help.
-
-## Our labels
-
-@TODO: document labels.
-
