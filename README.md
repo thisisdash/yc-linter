@@ -1,5 +1,9 @@
 # YoungCapital JavaScript Style Guide
 
+![GitHub](https://img.shields.io/github/license/youngcapital/yc-linter)
+![npm](https://img.shields.io/npm/v/@youngcapital/eslint-config-yc-react?label=npm%20%40youngcapital%2Feslint-config-yc-react)
+![npm](https://img.shields.io/npm/v/@youngcapital/eslint-config-yc-base?label=npm%20%40youngcapital%2Feslint-config-yc-base)
+
 ## Table of Contents
 
 - [Getting Started](#configuration)
