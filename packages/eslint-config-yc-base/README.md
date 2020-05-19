@@ -11,7 +11,7 @@ It inherits some basic packages like:
 
 ## Usage
 
-- Make sure you have eslint >5.12.0 installed according to the peerDependencies of this project
+- Make sure you have eslint >=6.8.0 installed according to the peerDependencies of this project
 - Install the package
 - Create `.eslintrc.js` on the root of your project
 - Add the block of code below:
