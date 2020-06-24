@@ -11,5 +11,6 @@ module.exports = {
   ]
     .map(require.resolve)
     .concat(['plugin:jest/recommended']),
-  plugins: ['jest', 'prettier']
+  plugins: ['jest', 'prettier'],
+  reportUnusedDisableDirectives: true
 };
