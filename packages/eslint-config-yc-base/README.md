@@ -3,6 +3,7 @@
 eslint yc base has been created to use in any JS vanilla project with nodejs setup.
 
 It inherits some basic packages like:
+
 - eslint-config-airbnb-base
 - eslint-plugin-import
 - eslint-plugin-jest
@@ -10,6 +11,8 @@ It inherits some basic packages like:
 - prettier
 
 ## Usage
+
+### ESLint
 
 - Make sure you have eslint >=6.8.0 installed according to the peerDependencies of this project
 - Install the package
@@ -31,17 +34,19 @@ It inherits some basic packages like:
   }
   ```
 
-## Running
+### Prettier
 
-## Using the .prettierrc.js in your project
+- make sure you have correct prettier version (check `peerDependencies.prettier` in [package.json](package.json))
+- install the package (e.g. `yarn add --dev @youngcapital/eslint-config-yc-base`)
+- update your package.json to include
 
-In your project you can symlink to the yc-base prettierrc using the following command:
-
-```shell
-ln -s node_modules/@youngcapital/eslint-config-yc-base/.prettierrc.js ./.prettierrc.js
+```json
+{
+  "prettier": "@youngcapital/eslint-config-yc-base/.prettierrc.js"
+}
 ```
 
-This will allow your editor prettier integration to use our prettier configuration.
+Please follow [official documentation](https://prettier.io/docs/en/configuration.html#sharing-configurations) for more details.
 
 ## Migrations
 
