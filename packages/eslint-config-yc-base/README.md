@@ -48,4 +48,4 @@ This will allow your editor prettier integration to use our prettier configurati
 ### to v.3
 
 After upgrading your project to use v.3 of `@youngcapital/eslint-config-yc-base` you'll probably want to reformat the code in your repository.  
-Please follow [this article][https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame] to achieve it in the least painful way.
+Please follow [this article](https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame) to achieve it in the least painful way.
