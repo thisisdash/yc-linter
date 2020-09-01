@@ -36,11 +36,11 @@ module.exports = {
     'space-before-blocks': 'error',
     'space-before-function-paren': [
       'error',
-      { anonymous: 'never', named: 'never', asyncArrow: 'always' }
+      { anonymous: 'never', named: 'never', asyncArrow: 'always' },
     ],
     'space-in-parens': 'error',
     quotes: 'error',
     semi: 'error',
-    indent: 'off'
-  }
+    indent: 'off',
+  },
 };
