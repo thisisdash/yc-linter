@@ -5,6 +5,6 @@ const prettierConfig = require(path.resolve(__dirname, '../.prettierrc.js'));
 
 module.exports = {
   rules: {
-    'prettier/prettier': ['error', prettierConfig]
-  }
+    'prettier/prettier': ['error', prettierConfig],
+  },
 };
