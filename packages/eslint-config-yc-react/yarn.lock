@@ -147,8 +147,10 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@youngcapital/eslint-config-yc-base@file:../eslint-config-yc-base":
-  version "2.0.0"
+"@youngcapital/eslint-config-yc-base@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@youngcapital/eslint-config-yc-base/-/eslint-config-yc-base-2.0.1.tgz#faa6238fb8b0c6e68d4b8d1d8e2fce9137136c06"
+  integrity sha512-YqOhS8dlDVaqQhC1XJT7Pgs7+2p3vyfzYGHJsuErkV/l39ZZcfQb3KPQwBRzSFGK1/zOJA+8kw3OHBFzr364Zw==
   dependencies:
     eslint-config-airbnb-base "^14.1.0"
     eslint-plugin-import "^2.20.1"
@@ -1064,9 +1066,9 @@ minimatch@^3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0, minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://npm.staging.nxdev.nl/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
 mkdirp@^0.5.1:
   version "0.5.5"
